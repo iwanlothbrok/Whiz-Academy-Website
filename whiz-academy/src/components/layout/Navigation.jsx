@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/whiz-white-green.png';
 
 const NavItem = ({ href, onClick, children, className }) => (
     <li>
@@ -102,15 +103,24 @@ const Navbar = () => {
         >
             <div className="container mx-auto px-4 lg:px-8">
                 <div className="relative flex items-center justify-between py-3 lg:py-5">
-                    <div className="flex-shrink-0 w-28">
+
+                    {/* Image and Text Container */}
+                    <div className="flex-shrink-0 flex items-center space-x-2">
                         {!isOnDetailsPage ? (
-                            <a href="/" className="block">
-                                <img src="/navlogo.png" alt="logo" className="w-full" />
+                            <a href="/" className="flex items-center">
+                                <img src={logo} alt="logo"
+                                    style={{
+                                        transform: 'scale(2.2)' // Adjust the image scaling
+                                    }}
+                                    className="w-24" // Adjust the width
+                                />
+                                <span className="font-medium text-2xl text-white ml-2">WHIZ ACADEMY</span>
                             </a>
                         ) : (
                             <div className="w-28 mb-5"></div>
                         )}
                     </div>
+
                     <div className="flex items-center">
                         <button
                             onClick={toggleMenu}
@@ -159,15 +169,13 @@ const Navbar = () => {
                                 </li>
                                 <NavItem href="/features">Features</NavItem>
                                 <NavItem href="/contact">Contact</NavItem>
-                                <div className="lg:flex items-center ml-5 space-x-2 lg:space-x-3">
-                                    <Link
-                                        href="/login"
-                                        className="px-6 py-3 text-lg font-semibold text-mainGreen bg-transparent border border-mainGreen rounded-full transition-all duration-300 hover:bg-mainGreen hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainGreen"
-                                        onClick={() => setIsMenuOpen(true)}
-                                    >
-                                        Логин
-                                    </Link>
-                                </div>
+                                <Link
+                                    href="/login"
+                                    className="px-6 py-3 text-lg font-semibold text-mainGreen bg-transparent border border-mainGreen rounded-full transition-all duration-300 hover:bg-mainGreen hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainGreen"
+                                    onClick={() => setIsMenuOpen(true)}
+                                >
+                                    Логин
+                                </Link>
                             </ul>
                         </nav>
                     </div>
