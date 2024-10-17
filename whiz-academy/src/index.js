@@ -6,7 +6,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import Navigation from './components/layout/Navigation';
-// import Footer from './components/layout/Footer';
+import Footer from './components/layout/Footer';
+import CTAButton from './components/CTAButton';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,7 +15,8 @@ root.render(
     <div className='bg-black'>
       <Navigation />
       <App />
-      {/* <Footer /> */}
+      <CTAButton />
+      <Footer />
     </div>
   </BrowserRouter>
 );
