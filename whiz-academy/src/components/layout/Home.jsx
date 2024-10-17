@@ -15,18 +15,18 @@ export const Home = () => {
             }}
         >
             {/* Overlay */}
-            <div className="absolute inset-0 pt-52 bg-gray-950 bg-opacity-60" />
+            <div className="absolute inset-0 pt-52 bg-black bg-opacity-80" />
 
             {/* Content */}
             <div className="relative z-10 flex flex-col left-0 items-center justify-center h-full text-center text-white px-4">
                 {/* Animated Title */}
                 <motion.h1
-                    className="text-3xl md:text-5xl  font-extrabold mb-4 leading-tight"
+                    className="text-3xl md:text-5xl  font-extrabold underline mb-4 leading-tight"
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <span className='text-mainGreen '>ТВОЕТО БЪДЕЩЕ  </span>В ПРОГРАМИРАНЕТО <span className='underline'>ЗАПОЧВА <span className='text-mainGreen'>ТУК  </span></span>
+                    <span className='text-mainGreen '>ТВОЕТО БЪДЕЩЕ  </span>В ПРОГРАМИРАНЕТО
                 </motion.h1>
 
                 {/* Subtitle */}
@@ -45,19 +45,19 @@ export const Home = () => {
 
                 {/* CTA Buttons */}
                 <motion.div
-                    className="flex flex-col md:flex-row gap-4"
+                    className="flex flex-col md:flex-row gap-6"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1 }}
                 >
                     <a href="/contact">
-                        <button className="bg-mainGreen text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-mainGreen hover:bg-opacity-80 transition-transform transform hover:scale-105 focus:outline-none">
-                            ПОРЪЧАЙ СЕГА
+                        <button className="bg-mainGreen text-white px-9 py-5 rounded-full text-lg font-semibold shadow-lg hover:bg-mainGreen hover:bg-opacity-80 transition-transform transform hover:scale-105 focus:outline-none">
+                            ЗАПАЗИ КОНСУЛТАЦИЯ
                         </button>
                     </a>
                     <a href="/features">
-                        <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-gray-200 hover:text-black transition-transform transform hover:scale-105 focus:outline-none">
-                            НАУЧИ ПОВЕЧЕ
+                        <button className="bg-transparent border-2 border-white text-white px-9 py-5 rounded-full text-lg font-semibold shadow-lg hover:bg-gray-200 hover:text-black transition-transform transform hover:scale-105 focus:outline-none">
+                            РЕГИСТРИРАЙ СЕ
                         </button>
                     </a>
                 </motion.div>
