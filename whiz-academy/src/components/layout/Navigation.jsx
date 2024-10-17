@@ -7,7 +7,7 @@ const NavItem = ({ href, onClick, children, className }) => (
         <a
             href={href}
             onClick={onClick}
-            className={`block px-4 py-2 hover:text-mainGreen font-medium ${className || ''}`}
+            className={`block px-4 py-2 hover:text-mainGreen font-medium text-lg ${className || ''}`}
         >
             {children}
         </a>
@@ -146,13 +146,13 @@ const Navbar = () => {
                                 </button>
                             </div>
                             <ul className="flex flex-col items-center justify-center text-white h-2/3 lg:flex-row lg:space-x-8">
-                                <NavItem href="/">Home</NavItem>
+                                <NavItem href="/">Начало</NavItem>
                                 <li className="relative group">
                                     <button
                                         onClick={toggleProductDropdown}
                                         className="text-white py-2 font-medium hover:text-mainGreen"
                                     >
-                                        Products
+                                        Продукти
                                     </button>
                                     {isProductDropdownOpen && (
                                         <div
@@ -167,14 +167,14 @@ const Navbar = () => {
                                         </div>
                                     )}
                                 </li>
-                                <NavItem href="/features">Features</NavItem>
-                                <NavItem href="/contact">Contact</NavItem>
+                                <NavItem href="/features">За Нас</NavItem>
+                                <NavItem href="/contact">Контакти</NavItem>
                                 <Link
                                     href="/login"
                                     className="px-6 py-3 text-lg font-semibold text-mainGreen bg-transparent border border-mainGreen rounded-full transition-all duration-300 hover:bg-mainGreen hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mainGreen"
                                     onClick={() => setIsMenuOpen(true)}
                                 >
-                                    Логин
+                                    Календар
                                 </Link>
                             </ul>
                         </nav>
