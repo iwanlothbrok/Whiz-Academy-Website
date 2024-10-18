@@ -1,74 +1,81 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+
 const Footer = () => {
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth', // Add smooth scrolling behavior for a smoother transition
-        });
-    }
-    const [email, setEmail] = useState(''); // Initialize email state with an empty string
-
-    const handleButtonClick = () => {
-        setEmail('');
-    }
-
     return (
+        <footer className="bg-black text-white py-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-        <div className="container-fluid text-light footer pt-5 wow fadeIn mt-80" style={{ background: '#232323' }} data-wow-delay="0.1s">
-            <div className="container py-5">
-                <div className="row g-5">
-                    <div className="col-lg-3 col-md-6">
-                        <h4 className="text-white mb-3">Полезни линкове</h4>
-                        <Link className="btn btn-link" onClick={scrollToTop} to="/study/csharp">Уроци по C#</Link>
-                        <Link className="btn btn-link" onClick={scrollToTop} to="/study/javascript">Уроци по JavaScript</Link>
-                        <Link className="btn btn-link" onClick={scrollToTop} to="/study/java">Уроци по Java</Link>
-                        <Link className="btn btn-link" onClick={scrollToTop} to="/study/cplus">Уроци по C++</Link>
-                        <Link className="btn btn-link" onClick={scrollToTop} to="/study/sql">Уроци по SQL</Link>
+                    {/* About Section */}
+                    <div>
+                        <h3 className="text-lg font-semibold mb-4">За Whiz Academy</h3>
+                        <p className="text-gray-400 leading-relaxed">
+                            Whiz Academy е онлайн платформа, която предлага персонализирано обучение в програмиране. Нашите ментори ви помагат да развиете своите умения и да постигнете успех в IT индустрията.
+                        </p>
                     </div>
-                    <div className="col-lg-3 col-md-6">
-                        <h4 className="text-white mb-3">Контакти</h4>
-                        <p className="mb-2"><i className="fa fa-phone-alt me-3"></i>+359 88 904 4614</p>
-                        <p className="mb-2"><i className="fa fa-envelope me-3"></i>whiztech.team@gmail.com</p>
-                        <div className="d-flex pt-2">
-                            <a className="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61551909726471"><i className="fab fa-facebook-f"></i></a>
-                            <a className="btn btn-outline-light btn-social" href="https://www.instagram.com/whiztechlessons/?hl=en"><i className="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div className="col-lg-3 col-md-6">
-                        <h4 className="text-white mb-3">Изпрати Имейл за връзка</h4>
-                        <div className="position-relative mx-auto" style={{ maxWidth: '400px' }}>
 
-                            <input className="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" value={email}
-                                onChange={(e) => setEmail(e.target.value)} />
-                            <button type="button" onClick={handleButtonClick} className="btn bg-black text-white py-2 position-absolute top-0 end-0 mt-2 me-2">Изпрати</button>
-                        </div>
+                    {/* Quick Links */}
+                    <div>
+                        <h3 className="text-lg font-semibold mb-4">Бързи връзки</h3>
+                        <ul className="space-y-3 text-gray-400">
+                            <li>
+                                <a href="/" className="hover:text-green-400 transition-colors">
+                                    Начало
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/about" className="hover:text-green-400 transition-colors">
+                                    За нас
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/courses" className="hover:text-green-400 transition-colors">
+                                    Курсове
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contact" className="hover:text-green-400 transition-colors">
+                                    Контакти
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div className="col-lg-3 col-md-6">
-                        <h4 className="text-white mb-3">Блог</h4>
-                        <Link className="btn btn-link" onClick={scrollToTop} to="/blog/1">Visual Studio Code vs Visual Studio</Link>
-                        <Link className="btn btn-link" onClick={scrollToTop} to="/blog/3">C# за начинаещи</Link>
-                        <Link className="btn btn-link" onClick={scrollToTop} to="/blog/4">Какво представлява React</Link>
+
+                    {/* Contact Section */}
+                    <div>
+                        <h3 className="text-lg font-semibold mb-4">Свържете се с нас</h3>
+                        <p className="text-gray-400">
+                            Email: info@whizacademy.com
+                        </p>
+                        <p className="text-gray-400">
+                            Телефон: +359 123 456 789
+                        </p>
+
+                        {/* Social Media Icons */}
+                        <div className="flex space-x-4 mt-6">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors">
+                                <FaFacebook size={24} />
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors">
+                                <FaTwitter size={24} />
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors">
+                                <FaInstagram size={24} />
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors">
+                                <FaLinkedin size={24} />
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="container">
-                <div className="copyright">
-                    <div className="row">
-                        <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a className="border-bottom" href="#">WhizTech</a>, All Right Reserved.
-                        </div>
-                        <div className="col-md-6 text-center text-md-end">
-                            <div className="footer-menu">
-                                <Link onClick={scrollToTop} to='/'>Home</Link>
-                                <Link onClick={scrollToTop} to='/calendar'>Запиши се за първи урок</Link>
 
-                            </div>
-                        </div>
-                    </div>
+                {/* Footer Bottom */}
+                <div className="mt-12 border-t border-gray-700 pt-6 text-center text-gray-400">
+                    <p>&copy; {new Date().getFullYear()} Whiz Academy. Всички права запазени.</p>
                 </div>
             </div>
-        </div>
+        </footer>
     );
 };
 
