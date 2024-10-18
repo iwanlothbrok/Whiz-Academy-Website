@@ -36,10 +36,9 @@ export const Home = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.5 }}
                 >
-
                     <span className='text-mainGreen'>Индивидуално обучение и проекти, </span>
-                    съобразени с търсенето на пазара,  за да бъдеш
-                    <span className='text-mainGreen'> готов за успех още от първия ден.</span>
+                    за да бъдеш готов за
+                    <span className='text-mainGreen'> успех </span>още от първия ден
                 </motion.p>
 
 
