@@ -39,7 +39,7 @@ function Features() {
     ];
 
     return (
-        <div className="relative bg-gradient-to-b from-black to-green-950 py-16">
+        <div className="relative bg-gradient-to-b from-black via-black to-green-950 py-16">
             <div className="container mx-auto text-center px-4 lg:px-8">
 
 
