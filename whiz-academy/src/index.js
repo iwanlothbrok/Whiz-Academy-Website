@@ -15,9 +15,10 @@ root.render(
     <div className='bg-black'>
       <Navigation />
       <App />
-      <CTAButton />
       <Footer />
     </div>
+    <CTAButton />
+
   </BrowserRouter>
 );
 
