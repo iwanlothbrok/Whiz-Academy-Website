@@ -1,4 +1,5 @@
 import CTAButton from './components/CTAButton';
+import LMSPage from './components/LMSPage';
 import About from './components/about/About';
 import Features from './components/layout/Features';
 import FrequentlyAskedQuestions from './components/layout/FrequentlyAskedQuestions';
@@ -19,6 +20,7 @@ function App() {
       </div>
       <FrequentlyAskedQuestions />
       <RegisterCTA />
+      <LMSPage />
     </div>
   );
 }
